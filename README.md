@@ -1,3 +1,11 @@
+# UnsungHero
+
+UnsungHero is a rebranded build of [Hiddify](https://github.com/hiddify/hiddify-app) for a private group of users. It is distributed under the same [Hiddify Extended GPL v3 license](https://github.com/hiddify/hiddify-app/blob/main/LICENSE.md), non-commercial.
+
+**Changes from upstream:** app name, identifiers (`bot.unsunghero.app`), icons, `unsunghero://` URL scheme, support links. No changes to the core or routing logic.
+
+---
+
 <div dir="ltr" align=center>
 
 [**فارسی 🇮🇷**](README_fa.md) / [**Русский 🇷🇺**](README_ru.md) / [**简体中文 🇨🇳**](README_cn.md) / [**日本語 🇯🇵**](README_ja.md) / [**Português-BR 🇧🇷**](README_br.md)
