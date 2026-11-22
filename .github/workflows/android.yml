@@ -1,0 +1,22 @@
+# Android APK only, on demand (UnsungHero). Run it from the Actions tab on the branch to build.
+name: Android
+
+on:
+  workflow_dispatch:
+    inputs:
+      channel:
+        description: dev or prod (which hiddify-core release the Makefile downloads).
+        type: string
+        default: prod
+
+jobs:
+  apk:
+    uses: ./.github/workflows/build-android.yml
+    secrets: inherit
+    permissions:
+      contents: read
+    with:
+      release: true
+      channel: ${{ inputs.channel }}
+      targets: '["apk"]'
+      generated-code: false
