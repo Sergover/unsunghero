@@ -1,6 +1,6 @@
 {
   "common": {
-    "appTitle": "Hiddify",
+    "appTitle": "UnsungHero",
     "start": "開始",
     "version": "版本",
     "ok": "確定",
@@ -98,7 +98,7 @@
   "intro": {
     "banner": "暢享無限制網路的所需一切",
     "termsAndPolicyCaution(rich)": "繼續即表示您同意 ${tap(@:pages.about.termsAndConditions)}",
-    "info(rich)": "由 Hiddify 以 ❤️ 製作。${tap_source(開源)} 和 ${tap_license(授權)}"
+    "info(rich)": "由 UnsungHero 以 ❤️ 製作。${tap_source(開源)} 和 ${tap_license(授權)}"
   },
   "pages": {
     "home": {
@@ -218,7 +218,7 @@
         "share": "分享",
         "edit": "編輯",
         "shareTitle": "分享代理",
-        "configHint": "僅包含這個代理，以及它所連線經過的代理。Hiddify 可像匯入其他設定一樣匯入它。",
+        "configHint": "僅包含這個代理，以及它所連線經過的代理。UnsungHero 可像匯入其他設定一樣匯入它。",
         "editTitle": "以新設定檔編輯",
         "editMsg": "「${name}」會複製到一個可編輯的新設定檔。原本的內容保持不變，因為訂閱每次更新都會取代其中的代理。",
         "editConfirm": "複製並編輯",
@@ -238,7 +238,7 @@
         "received": "已收到來自手機的內容",
         "from": "來自 $address",
         "page": {
-          "title": "傳送到電視上的 Hiddify",
+          "title": "傳送到電視上的 UnsungHero",
           "intro": "只要四個步驟就能把訂閱加入電視，不必用遙控器輸入。",
           "steps": {
             "network": {
@@ -277,7 +277,7 @@
       "updateSubscriptions": "更新訂閱",
       "share": {
         "title": "分享設定檔",
-        "scanHint": "在另一台裝置上用 Hiddify 掃描，即可新增此設定檔",
+        "scanHint": "在另一台裝置上用 UnsungHero 掃描，即可新增此設定檔",
         "link": "訂閱連結",
         "config": "設定",
         "configHint": "此設定檔執行時使用的完整 JSON，包含您的設定",
@@ -288,9 +288,9 @@
         "tooLargeToCopy": "內容過大，無法放入剪貼簿：請以檔案分享或儲存",
         "toTv": {
           "button": "傳送到電視",
-          "scanHint": "在電視上開啟 Hiddify，點一下 + 新增設定檔，然後掃描顯示的代碼。兩台裝置必須連線到同一個 Wi-Fi。",
+          "scanHint": "在電視上開啟 UnsungHero，點一下 + 新增設定檔，然後掃描顯示的代碼。兩台裝置必須連線到同一個 Wi-Fi。",
           "sent": "已傳送。請在電視上按「匯入」來新增。",
-          "notTvCode": "這不是 Hiddify 電視代碼。請在電視上點一下 + 新增設定檔，即可顯示代碼。",
+          "notTvCode": "這不是 UnsungHero 電視代碼。請在電視上點一下 + 新增設定檔，即可顯示代碼。",
           "expired": "電視已不再接受此代碼的連結。請在電視上重新開啟新增設定檔畫面，並掃描新的代碼。",
           "busy": "電視上等待中的連結太多。請先在電視上匯入或捨棄，然後再試一次。",
           "unreachable": "無法連到電視。請確認手機和電視連線到同一個 Wi-Fi 網路。"
@@ -955,7 +955,7 @@
       "updateNow": "立即更新",
       "downloading": "正在下載…",
       "installing": "正在啟動安裝程式…",
-      "allowInstall": "請在開啟的設定中允許 Hiddify 安裝應用程式,然後重試。",
+      "allowInstall": "請在開啟的設定中允許 UnsungHero 安裝應用程式,然後重試。",
       "failed": "無法安裝更新。",
       "openPage": "開啟發布頁面",
       "tryAgain": "重試"
@@ -1002,7 +1002,7 @@
         "someApps": "瀏覽器和大多數應用程式",
         "switched": "已切換為系統代理模式。您可以在設定中變更。",
         "waitingTitle": "正在等待管理員權限",
-        "waitingMsg": "Hiddify 正在等待你允許 VPN 模式。",
+        "waitingMsg": "UnsungHero 正在等待你允許 VPN 模式。",
         "waitingWhere": "在開啟的視窗中：",
         "waitingWindows": "點一下「是」。",
         "waitingMac": "輸入您的 Mac 密碼並確認。",
@@ -1019,22 +1019,22 @@
         "helpProsTitle": "優點",
         "helpConsTitle": "注意事項",
         "helpVpn": {
-          "what": "Hiddify 會在您的電腦上新增一個虛擬網路，所有應用程式的網路流量都會自動經過它：瀏覽器、Telegram、遊戲、更新等等。不需要在每個應用程式中另外設定。",
+          "what": "UnsungHero 會在您的電腦上新增一個虛擬網路，所有應用程式的網路流量都會自動經過它：瀏覽器、Telegram、遊戲、更新等等。不需要在每個應用程式中另外設定。",
           "pros": [
-            "所有應用程式都經過 Hiddify，不必在每個應用程式中設定。",
+            "所有應用程式都經過 UnsungHero，不必在每個應用程式中設定。",
             "會忽略代理設定的應用程式，例如 Telegram 和遊戲，也能正常運作。",
-            "網域名稱查詢 (DNS) 也經過 Hiddify，因此以此方式封鎖的網站也能開啟。"
+            "網域名稱查詢 (DNS) 也經過 UnsungHero，因此以此方式封鎖的網站也能開啟。"
           ],
           "cons": [
-            "第一次使用時，電腦會要求管理員權限，以安裝 Hiddify 的背景服務。之後連線就不會再詢問。",
+            "第一次使用時，電腦會要求管理員權限，以安裝 UnsungHero 的背景服務。之後連線就不會再詢問。",
             "使用時請關閉其他 VPN 應用程式：兩個同時執行會互相干擾。"
           ]
         },
         "helpSystemProxy": {
-          "what": "Hiddify 會變更電腦的代理設定。遵循該設定的應用程式（例如網頁瀏覽器）會透過 Hiddify 傳送流量；其餘應用程式則直接連線，就像 Hiddify 沒有開啟一樣。",
+          "what": "UnsungHero 會變更電腦的代理設定。遵循該設定的應用程式（例如網頁瀏覽器）會透過 UnsungHero 傳送流量；其餘應用程式則直接連線，就像 UnsungHero 沒有開啟一樣。",
           "pros": [
             "不需要管理員權限。",
-            "開關都很快，中斷連線時 Hiddify 會還原該設定。",
+            "開關都很快，中斷連線時 UnsungHero 會還原該設定。",
             "可與電腦上的其他網路工具並存。"
           ],
           "cons": [
@@ -1066,7 +1066,7 @@
       "msg": "讓我們開始吧。新增一個包含您 VPN 伺服器資訊的連線設定檔。\n\n還沒有伺服器？沒關係。下面的指南會告訴您如何免費建立一個。",
       "helpBtn": {
         "label": "告訴我如何操作",
-        "url": "https://hiddify.com/manager/"
+        "url": "https://t.me/UnsungHeroBot"
       }
     },
     "unknownDomainsWarning": {
@@ -1135,18 +1135,18 @@
       "scrubSecrets": "正在移除 IP、網域和金鑰",
       "encryptingLogs": "正在加密日誌",
       "notEncrypted": "日誌未加密",
-      "title": "Hiddify 上次當機了",
+      "title": "UnsungHero 上次當機了",
       "msg": "傳送報告，幫我們修正問題。日誌會一併附上。",
-      "sendHiddify": "傳送給 Hiddify",
+      "sendHiddify": "傳送給 UnsungHero",
       "sendHiddifyMsg": "應用程式會自行上傳報告",
       "sent": "報告已傳送。謝謝！",
       "sendFailed": "無法傳送報告。請改用電子郵件或 Telegram。",
-      "subject": "Hiddify 當機報告",
+      "subject": "UnsungHero 當機報告",
       "problemTitle": "回報問題",
       "problemMsg": "告訴我們哪裡出了問題。日誌會一併附上。",
       "description": "發生了什麼事？（選填）",
       "descriptionHint": "你做了什麼、期望什麼、實際看到了什麼",
-      "problemSubject": "Hiddify 問題報告",
+      "problemSubject": "UnsungHero 問題報告",
       "back": "返回",
       "chooseHow": "你想怎麼傳送？",
       "steps": {
@@ -1166,8 +1166,8 @@
         "openGithubMsg": "登入 GitHub。你的描述、平台、版本和系統資訊已填好。",
         "openGithubButton": "開啟 GitHub",
         "dropInIssue": "附上報告並按下 Create",
-        "telegramPrivate": "私密：只有 Hiddify 支援團隊能看到報告。",
-        "emailPrivate": "私密：只有 Hiddify 團隊會閱讀報告。",
+        "telegramPrivate": "私密：只有 UnsungHero 支援團隊能看到報告。",
+        "emailPrivate": "私密：只有 UnsungHero 團隊會閱讀報告。",
         "attachInChat": "在機器人聊天中附上報告並傳送",
         "attachHow": "把檔案拖進來，或使用迴紋針",
         "dropInIssueHow": "把檔案拖到 Additional Context，或點一下該欄位下方的列",
@@ -1181,7 +1181,7 @@
         "step1Msg": "之後會自動關閉",
         "step2": "重新連線並讓問題再次發生",
         "step2Msg": "完全照出問題時的操作再做一次",
-        "step2Connected": "Hiddify 會自動重新連線以開始記錄。現在重複之前出問題的操作。",
+        "step2Connected": "UnsungHero 會自動重新連線以開始記錄。現在重複之前出問題的操作。",
         "step3": "回到這裡傳送報告",
         "step3Msg": "再次開啟「回報問題」，描述你看到的情況",
         "privacy": "任何內容離開你的裝置前，IP、網域和金鑰都會被移除。$minutes 分鐘後日誌恢復正常。",
@@ -1257,7 +1257,7 @@
         "開啟應用程式的代理設定",
         "選擇 SOCKS5 或 HTTP",
         "填入下方的值 · 點按即可複製",
-        "保持 Hiddify 連線"
+        "保持 UnsungHero 連線"
       ],
       "hint": "代理模式 · 使用說明",
       "setPassword": "設定密碼",
@@ -1278,21 +1278,21 @@
     },
     "dbNewerThanApp": {
       "title": "儲存的資料來自較新版本",
-      "msg": "您的設定檔和設定是由較新版本的 Hiddify 儲存的，這個較舊的版本無法讀取。請安裝最新版本以保留它們，或刪除它們以使用此版本。",
+      "msg": "您的設定檔和設定是由較新版本的 UnsungHero 儲存的，這個較舊的版本無法讀取。請安裝最新版本以保留它們，或刪除它們以使用此版本。",
       "deleteData": "清除資料",
       "deleteConfirm": "儲存的資料將被清除。您的訂閱和本機設定檔會盡可能重新加入；較新版本儲存的其他內容將會遺失。",
       "downloadLatest": "下載最新版本"
     },
     "dbBroken": {
       "title": "無法開啟儲存的資料",
-      "msg": "Hiddify 無法開啟已儲存的設定檔。請清除儲存的資料並重新開始：您的訂閱和本機設定檔會盡可能重新加入，您的設定則會保留。",
+      "msg": "UnsungHero 無法開啟已儲存的設定檔。請清除儲存的資料並重新開始：您的訂閱和本機設定檔會盡可能重新加入，您的設定則會保留。",
       "wipeData": "清除資料",
-      "wipeConfirm": "儲存的資料將被清除，Hiddify 會重新開始。仍可讀取的設定檔會重新加入；其餘的無法復原。",
+      "wipeConfirm": "儲存的資料將被清除，UnsungHero 會重新開始。仍可讀取的設定檔會重新加入；其餘的無法復原。",
       "copyError": "複製錯誤"
     },
     "telegramChannel": {
-      "title": "加入 Hiddify Telegram 頻道",
-      "msg": "關注 Hiddify 官方頻道，取得新聞、新版本和保持連線的技巧。",
+      "title": "加入 UnsungHero Telegram 頻道",
+      "msg": "關注 UnsungHero 官方頻道，取得新聞、新版本和保持連線的技巧。",
       "join": "加入頻道"
     }
   },

@@ -20,8 +20,8 @@ abstract class Constants {
   static const bugReportTelegramBot = "UnsungHeroBot";
   static const bugReportTelegramName = "@$bugReportTelegramBot";
   static const bugReportGithubIssueUrl = "https://github.com/Sergover/unsunghero/issues/new";
-  static const privacyPolicyUrl = "https://hiddify.com/privacy-policy/";
-  static const termsAndConditionsUrl = "https://hiddify.com/terms/";
+  static const privacyPolicyUrl = "https://github.com/Sergover/unsunghero#privacy";
+  static const termsAndConditionsUrl = "https://github.com/Sergover/unsunghero#terms";
   static const cfWarpPrivacyPolicy = "https://www.cloudflare.com/application/privacypolicy/";
   static const cfWarpTermsOfService = "https://www.cloudflare.com/application/terms/";
 }

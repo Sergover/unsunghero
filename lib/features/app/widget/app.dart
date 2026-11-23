@@ -13,7 +13,6 @@ import 'package:hiddify/core/localization/locale_preferences.dart';
 import 'package:hiddify/core/localization/translations.dart';
 import 'package:hiddify/core/model/constants.dart';
 import 'package:hiddify/core/notification/in_app_notification_controller.dart';
-import 'package:hiddify/core/preferences/general_preferences.dart';
 import 'package:hiddify/core/router/dialog/dialog_notifier.dart';
 import 'package:hiddify/core/router/go_router/go_router_notifier.dart';
 import 'package:hiddify/core/router/go_router/helper/active_breakpoint_notifier.dart';
@@ -38,10 +37,6 @@ import 'package:upgrader/upgrader.dart';
 
 bool _debugAccessibility = false;
 bool isOnPauseCalled = false;
-
-const _telegramOfferDelay = Duration(minutes: 2);
-const _telegramFirstOfferAfter = Duration(days: 3);
-const _telegramOfferEvery = Duration(days: 30);
 
 class App extends HookConsumerWidget with WidgetsBindingObserver, PresLogger {
   const App({super.key});
@@ -95,25 +90,8 @@ class App extends HookConsumerWidget with WidgetsBindingObserver, PresLogger {
               canIgnore: true,
             );
       });
-      // the Telegram channel is offered a few days after the first use, then once a month,
-      // some minutes into a run so it does not meet the update or crash report dialogs
-      final telegramOffer = Timer(_telegramOfferDelay, () async {
-        if (!ref.read(Preferences.introCompleted)) return;
-        final now = DateTime.now();
-        final firstUsed = ref.read(Preferences.firstUsedAt);
-        if (firstUsed == null) {
-          await ref.read(Preferences.firstUsedAt.notifier).update(now);
-          return;
-        }
-        if (now.difference(firstUsed) < _telegramFirstOfferAfter) return;
-        final offered = ref.read(Preferences.telegramChannelOfferedAt);
-        if (offered != null && now.difference(offered) < _telegramOfferEvery) return;
-        await ref.read(Preferences.telegramChannelOfferedAt.notifier).update(now);
-        await ref.read(dialogNotifierProvider.notifier).showTelegramChannel();
-      });
       return () {
         updateCheck.cancel();
-        telegramOffer.cancel();
       };
     }, const []);
 

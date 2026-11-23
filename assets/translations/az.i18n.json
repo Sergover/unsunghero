@@ -1,6 +1,6 @@
 {
   "common": {
-    "appTitle": "Hiddify",
+    "appTitle": "UnsungHero",
     "start": "Başla",
     "version": "Versiya",
     "ok": "OK",
@@ -98,7 +98,7 @@
   "intro": {
     "banner": "Məhdudiyyətsiz internet üçün lazım olan hər şey",
     "termsAndPolicyCaution(rich)": "Davam etməklə siz ${tap(@:pages.about.termsAndConditions)} ilə razılaşırsınız",
-    "info(rich)": "Hiddify tərəfindən ❤️ ilə hazırlanıb. ${tap_source(Açıq mənbə)} və ${tap_license(Lisenziya)}"
+    "info(rich)": "UnsungHero tərəfindən ❤️ ilə hazırlanıb. ${tap_source(Açıq mənbə)} və ${tap_license(Lisenziya)}"
   },
   "pages": {
     "home": {
@@ -218,7 +218,7 @@
         "share": "Paylaş",
         "edit": "Redaktə et",
         "shareTitle": "Proksini paylaş",
-        "configHint": "Yalnız bu proksi və onun vasitəsilə qoşulduğu proksilər. Hiddify bunu hər hansı konfiqurasiya kimi idxal edir.",
+        "configHint": "Yalnız bu proksi və onun vasitəsilə qoşulduğu proksilər. UnsungHero bunu hər hansı konfiqurasiya kimi idxal edir.",
         "editTitle": "Yeni profil kimi redaktə et",
         "editMsg": "“${name}” redaktə edə biləcəyiniz yeni profilə köçürülür. Abunəlik hər yenilənmədə proksilərini əvəz etdiyi üçün orijinal olduğu kimi qalır.",
         "editConfirm": "Köçür və redaktə et",
@@ -238,7 +238,7 @@
         "received": "Telefonunuzdan alındı",
         "from": "Göndərən: $address",
         "page": {
-          "title": "Televizorunuzdakı Hiddify-a göndərin",
+          "title": "Televizorunuzdakı UnsungHero-a göndərin",
           "intro": "Pultla yazmadan, dörd sürətli addımda televizorunuza abunəlik əlavə edin.",
           "steps": {
             "network": {
@@ -277,7 +277,7 @@
       "updateSubscriptions": "Abunəlikləri yenilə",
       "share": {
         "title": "Profili paylaş",
-        "scanHint": "Bu profili əlavə etmək üçün başqa cihazda Hiddify ilə skan edin",
+        "scanHint": "Bu profili əlavə etmək üçün başqa cihazda UnsungHero ilə skan edin",
         "link": "Abunəlik keçidi",
         "config": "Konfiqurasiya",
         "configHint": "Bu profilin işlədiyi tam JSON, parametrləriniz daxil olmaqla",
@@ -288,9 +288,9 @@
         "tooLargeToCopy": "Buferə sığmayacaq qədər böyükdür: fayl kimi paylaşın və ya yadda saxlayın",
         "toTv": {
           "button": "Televizora göndər",
-          "scanHint": "Televizorda Hiddify-ı açın, profil əlavə etmək üçün + düyməsinə toxunun, sonra göstərilən kodu skan edin. Hər iki cihaz eyni Wi-Fi şəbəkəsində olmalıdır.",
+          "scanHint": "Televizorda UnsungHero-ı açın, profil əlavə etmək üçün + düyməsinə toxunun, sonra göstərilən kodu skan edin. Hər iki cihaz eyni Wi-Fi şəbəkəsində olmalıdır.",
           "sent": "Göndərildi. Əlavə etmək üçün televizorda İdxal et düyməsini basın.",
-          "notTvCode": "Bu Hiddify televizor kodu deyil. Kodu göstərmək üçün televizorda profil əlavə etmək üçün + düyməsinə toxunun.",
+          "notTvCode": "Bu UnsungHero televizor kodu deyil. Kodu göstərmək üçün televizorda profil əlavə etmək üçün + düyməsinə toxunun.",
           "expired": "Televizor bu kod ilə artıq keçid qəbul etmir. Televizorda profil əlavə etmə ekranını yenidən açın və yeni kodu skan edin.",
           "busy": "Televizorda çox keçid gözləyir. Onları televizorda idxal edin və ya atın, sonra yenidən cəhd edin.",
           "unreachable": "Televizora çatmaq alınmadı. Telefonun və televizorun eyni Wi-Fi şəbəkəsində olduğuna əmin olun."
@@ -955,7 +955,7 @@
       "updateNow": "İndi yenilə",
       "downloading": "Endirilir…",
       "installing": "Quraşdırıcı başladılır…",
-      "allowInstall": "Açılan parametrlərdə Hiddify-a tətbiq quraşdırmağa icazə verin, sonra yenidən cəhd edin.",
+      "allowInstall": "Açılan parametrlərdə UnsungHero-a tətbiq quraşdırmağa icazə verin, sonra yenidən cəhd edin.",
       "failed": "Yenilənməni quraşdırmaq alınmadı.",
       "openPage": "Buraxılış səhifəsini aç",
       "tryAgain": "Yenidən cəhd et"
@@ -1002,7 +1002,7 @@
         "someApps": "Brauzerlər və əksər tətbiqlər",
         "switched": "Sistem proksisi rejiminə keçildi. Bunu Parametrlərdə dəyişə bilərsiniz.",
         "waitingTitle": "Administrator icazəsi gözlənilir",
-        "waitingMsg": "Hiddify VPN rejiminə icazə verməyinizi gözləyir.",
+        "waitingMsg": "UnsungHero VPN rejiminə icazə verməyinizi gözləyir.",
         "waitingWhere": "Açılan pəncərədə:",
         "waitingWindows": "“Bəli” düyməsinə klikləyin.",
         "waitingMac": "Mac parolunuzu daxil edin və təsdiq edin.",
@@ -1019,22 +1019,22 @@
         "helpProsTitle": "Üstünlüklər",
         "helpConsTitle": "Nəzərə alın",
         "helpVpn": {
-          "what": "Hiddify kompüterinizə virtual şəbəkə əlavə edir və hər tətbiqin internet trafiki özü-özünə onun üzərindən keçir: brauzerlər, Telegram, oyunlar, yenilənmələr və digərləri. Hər tətbiqdə nəsə ayarlamaq lazım deyil.",
+          "what": "UnsungHero kompüterinizə virtual şəbəkə əlavə edir və hər tətbiqin internet trafiki özü-özünə onun üzərindən keçir: brauzerlər, Telegram, oyunlar, yenilənmələr və digərləri. Hər tətbiqdə nəsə ayarlamaq lazım deyil.",
           "pros": [
-            "Hər tətbiq Hiddify vasitəsilə işləyir, hər tətbiqdə parametr tələb olunmur.",
+            "Hər tətbiq UnsungHero vasitəsilə işləyir, hər tətbiqdə parametr tələb olunmur.",
             "Proksi parametrlərini nəzərə almayan Telegram və oyunlar kimi tətbiqlər də işləyir.",
-            "Ad sorğuları (DNS) da Hiddify vasitəsilə gedir, ona görə bu yolla bloklanan saytlar da açılır."
+            "Ad sorğuları (DNS) da UnsungHero vasitəsilə gedir, ona görə bu yolla bloklanan saytlar da açılır."
           ],
           "cons": [
-            "İlk dəfə kompüteriniz Hiddify-ın fon xidmətini quraşdırmaq üçün administrator icazəsi soruşur. Bundan sonra soruşmadan qoşulur.",
+            "İlk dəfə kompüteriniz UnsungHero-ın fon xidmətini quraşdırmaq üçün administrator icazəsi soruşur. Bundan sonra soruşmadan qoşulur.",
             "İstifadə edərkən digər VPN tətbiqlərini söndürün: ikisi eyni vaxtda bir-birinə mane olur."
           ]
         },
         "helpSystemProxy": {
-          "what": "Hiddify kompüterinizin proksi parametrini dəyişir. Veb brauzerlər kimi bu parametrə əməl edən tətbiqlər trafikini Hiddify vasitəsilə göndərir; qalanları Hiddify söndürülmüş kimi birbaşa qoşulur.",
+          "what": "UnsungHero kompüterinizin proksi parametrini dəyişir. Veb brauzerlər kimi bu parametrə əməl edən tətbiqlər trafikini UnsungHero vasitəsilə göndərir; qalanları UnsungHero söndürülmüş kimi birbaşa qoşulur.",
           "pros": [
             "Administrator icazəsi lazım deyil.",
-            "Tez aktiv və deaktiv olunur, bağlantını kəsdiyiniz zaman Hiddify parametri əvvəlki vəziyyətinə qaytarır.",
+            "Tez aktiv və deaktiv olunur, bağlantını kəsdiyiniz zaman UnsungHero parametri əvvəlki vəziyyətinə qaytarır.",
             "Kompüterinizdəki digər şəbəkə alətləri ilə yanaşı işləyir."
           ],
           "cons": [
@@ -1066,7 +1066,7 @@
       "msg": "Başlayaq. VPN serverinizin məlumatları ilə bağlantı profili əlavə edin.\n\nHələ serveriniz yoxdur? Problem deyil. Aşağıdakı bələdçi onu pulsuz necə qurmağı göstərir.",
       "helpBtn": {
         "label": "Necə olduğunu göstər",
-        "url": "https://hiddify.com/manager/"
+        "url": "https://t.me/UnsungHeroBot"
       }
     },
     "unknownDomainsWarning": {
@@ -1135,18 +1135,18 @@
       "scrubSecrets": "IP, domen və açarlar silinir",
       "encryptingLogs": "Loglar şifrələnir",
       "notEncrypted": "Loglar şifrələnməyib",
-      "title": "Hiddify son dəfə çökdü",
+      "title": "UnsungHero son dəfə çökdü",
       "msg": "Düzəltməyimiz üçün hesabat göndərin. Loglar da əlavə olunur.",
-      "sendHiddify": "Hiddify-a göndər",
+      "sendHiddify": "UnsungHero-a göndər",
       "sendHiddifyMsg": "Tətbiq hesabatı özü yükləyir",
       "sent": "Hesabat göndərildi. Təşəkkür edirik!",
       "sendFailed": "Hesabatı göndərmək alınmadı. Əvəzində e-poçt və ya Telegram sınayın.",
-      "subject": "Hiddify qəza hesabatı",
+      "subject": "UnsungHero qəza hesabatı",
       "problemTitle": "Problem barədə bildir",
       "problemMsg": "Nəyin səhv getdiyini yazın. Loglar da əlavə olunur.",
       "description": "Nə baş verdi? (istəyə bağlı)",
       "descriptionHint": "Nə etdiniz, nə gözləyirdiniz, əvəzinə nə gördünüz",
-      "problemSubject": "Hiddify problem hesabatı",
+      "problemSubject": "UnsungHero problem hesabatı",
       "back": "Geri",
       "chooseHow": "Necə göndərmək istəyirsiniz?",
       "steps": {
@@ -1166,8 +1166,8 @@
         "openGithubMsg": "GitHub-a daxil olun. Təsvir, platforma, versiya və sistem məlumatları doldurulub.",
         "openGithubButton": "GitHub-ı aç",
         "dropInIssue": "Hesabatı əlavə edib Create düyməsini basın",
-        "telegramPrivate": "Məxfi: hesabatı yalnız Hiddify dəstək komandası görür.",
-        "emailPrivate": "Məxfi: hesabatı yalnız Hiddify komandası oxuyur.",
+        "telegramPrivate": "Məxfi: hesabatı yalnız UnsungHero dəstək komandası görür.",
+        "emailPrivate": "Məxfi: hesabatı yalnız UnsungHero komandası oxuyur.",
         "attachInChat": "Hesabatı bot çatına əlavə edib göndərin",
         "attachHow": "Faylı içəri sürüşdürün və ya skrepka işarəsindən istifadə edin",
         "dropInIssueHow": "Faylı Additional Context xanasına sürüşdürün və ya həmin xananın altındakı zolağa toxunun",
@@ -1181,7 +1181,7 @@
         "step1Msg": "Sonra özü sönür",
         "step2": "Yenidən qoşulun və problemi təkrarlayın",
         "step2Msg": "Problem olanda nə etmişdinizsə, eynisini edin",
-        "step2Connected": "Yazmağa başlamaq üçün Hiddify özü yenidən qoşulur. İndi əvvəl problem yaradan addımı təkrarlayın.",
+        "step2Connected": "Yazmağa başlamaq üçün UnsungHero özü yenidən qoşulur. İndi əvvəl problem yaradan addımı təkrarlayın.",
         "step3": "Bura qayıdın və hesabatı göndərin",
         "step3Msg": "“Problem bildir” bölməsini yenidən açın və nə gördüyünüzü yazın",
         "privacy": "Cihazınızdan nəsə çıxmamış IP, domen və açarlar silinir. $minutes dəqiqədən sonra loglar adi rejimə qayıdır.",
@@ -1257,7 +1257,7 @@
         "Tətbiqin proksi parametrlərini açın",
         "SOCKS5 və ya HTTP seçin",
         "Aşağıdakı dəyərləri daxil edin · köçürmək üçün toxunun",
-        "Hiddify-ı qoşulu saxlayın"
+        "UnsungHero-ı qoşulu saxlayın"
       ],
       "hint": "Proksi rejimi · necə istifadə etməli",
       "setPassword": "Parol təyin et",
@@ -1278,21 +1278,21 @@
     },
     "dbNewerThanApp": {
       "title": "Saxlanılmış məlumatlar daha yeni versiyadandır",
-      "msg": "Profilləriniz və parametrləriniz Hiddify-ın daha yeni versiyası tərəfindən saxlanılıb və bu köhnə versiya onları oxuya bilmir. Onları saxlamaq üçün ən son versiyanı quraşdırın və ya bu versiyadan istifadə etmək üçün onları silin.",
+      "msg": "Profilləriniz və parametrləriniz UnsungHero-ın daha yeni versiyası tərəfindən saxlanılıb və bu köhnə versiya onları oxuya bilmir. Onları saxlamaq üçün ən son versiyanı quraşdırın və ya bu versiyadan istifadə etmək üçün onları silin.",
       "deleteData": "Məlumatları sil",
       "deleteConfirm": "Saxlanılmış məlumatlar silinir. Abunəlikləriniz və yerli profilləriniz mümkün olduqda geri əlavə olunur; daha yeni versiyanın saxladığı qalan hər şey itirilir.",
       "downloadLatest": "Ən son versiyanı endir"
     },
     "dbBroken": {
       "title": "Saxlanılmış məlumatları açmaq olmur",
-      "msg": "Hiddify saxlanılmış profillərini aça bilmədi. Yenidən başlamaq üçün saxlanılmış məlumatları silin: abunəlikləriniz və yerli profilləriniz mümkün olduqda geri əlavə olunur, parametrləriniz saxlanılır.",
+      "msg": "UnsungHero saxlanılmış profillərini aça bilmədi. Yenidən başlamaq üçün saxlanılmış məlumatları silin: abunəlikləriniz və yerli profilləriniz mümkün olduqda geri əlavə olunur, parametrləriniz saxlanılır.",
       "wipeData": "Məlumatları sil",
-      "wipeConfirm": "Saxlanılmış məlumatlar silinir və Hiddify yenidən başlayır. Hələ də oxuna bilən profillər geri əlavə olunur; qalanlarını bərpa etmək mümkün deyil.",
+      "wipeConfirm": "Saxlanılmış məlumatlar silinir və UnsungHero yenidən başlayır. Hələ də oxuna bilən profillər geri əlavə olunur; qalanlarını bərpa etmək mümkün deyil.",
       "copyError": "Xətanı köçür"
     },
     "telegramChannel": {
-      "title": "Hiddify ilə Telegram-da birləşin",
-      "msg": "Xəbərlər, yeni buraxılışlar və bağlı qalmaq üçün məsləhətlər üçün Hiddify-ın rəsmi kanalını izləyin.",
+      "title": "UnsungHero ilə Telegram-da birləşin",
+      "msg": "Xəbərlər, yeni buraxılışlar və bağlı qalmaq üçün məsləhətlər üçün UnsungHero-ın rəsmi kanalını izləyin.",
       "join": "Kanala qoşul"
     }
   },

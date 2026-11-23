@@ -92,7 +92,6 @@ class ConnectionButton extends HookConsumerWidget {
     final hopPending = look == _Look.connected && (health?.hopPending ?? false);
 
     const buttonTheme = ConnectionButtonTheme.light;
-    final today = DateTime.now();
     final button = _ConnectionButton(
       look: look,
       onTap: onTap,
@@ -136,11 +135,8 @@ class ConnectionButton extends HookConsumerWidget {
         _Look.connecting || _Look.waiting || _Look.hotReloading || _Look.disconnecting => const Color(0xFF455FE9),
         _ => buttonTheme.idleColor!,
       },
-      image: switch (look) {
-        _Look.connected || _Look.noProxies || _Look.hotReloading => Assets.images.connectNorouz,
-        _ => Assets.images.disconnectNorouz,
-      },
-      useImage: today.day >= 19 && today.day <= 23 && today.month == 3,
+      image: Assets.images.emblem,
+      useImage: true,
       // reduce animations stills only the light flowing round the button while connected; the
       // radar, the connecting and disconnecting waves keep moving. The system's reduce motion
       // stills the whole button.

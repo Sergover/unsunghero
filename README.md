@@ -2,7 +2,15 @@
 
 UnsungHero is a rebranded build of [Hiddify](https://github.com/hiddify/hiddify-app) for a private group of users. It is distributed under the same [Hiddify Extended GPL v3 license](https://github.com/hiddify/hiddify-app/blob/main/LICENSE.md), non-commercial.
 
-**Changes from upstream:** app name, identifiers (`bot.unsunghero.app`), icons, `unsunghero://` URL scheme, support links. No changes to the core or routing logic.
+**Changes from upstream:** app name, identifiers (`bot.unsunghero.app`), icons and in-app logo, `unsunghero://` URL scheme, support links, all user-facing texts (Hiddify → UnsungHero), the Telegram channel offer and the free-configs switch removed, no crash-report upload (no Sentry DSN). No changes to the core or routing logic.
+
+## Privacy
+
+The app connects only to the servers in the profile you add. It sends no analytics and uploads no crash reports: a problem report is a file you choose to send yourself by email or Telegram. The app stores profiles and settings on the device only.
+
+## Terms
+
+UnsungHero is provided as is, without warranty, for the private group of users it was built for. It is a non-commercial fork of Hiddify under the Hiddify Extended GPL v3 license linked above.
 
 ---
 

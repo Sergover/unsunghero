@@ -1,6 +1,6 @@
 {
   "common": {
-    "appTitle": "Hiddify",
+    "appTitle": "UnsungHero",
     "start": "Start",
     "version": "Version",
     "ok": "OK",
@@ -98,7 +98,7 @@
   "intro": {
     "banner": "Alles für ein Internet ohne Einschränkungen",
     "termsAndPolicyCaution(rich)": "Mit dem Fortfahren stimmen Sie den ${tap(@:pages.about.termsAndConditions)} zu",
-    "info(rich)": "Mit ❤️ von Hiddify gemacht. ${tap_source(Open Source)} und ${tap_license(Lizenz)}"
+    "info(rich)": "Mit ❤️ von UnsungHero gemacht. ${tap_source(Open Source)} und ${tap_license(Lizenz)}"
   },
   "pages": {
     "home": {
@@ -218,7 +218,7 @@
         "share": "Teilen",
         "edit": "Bearbeiten",
         "shareTitle": "Proxy teilen",
-        "configHint": "Nur dieser Proxy und jeder Proxy, über den er verbindet. Hiddify importiert ihn wie jede andere Konfiguration.",
+        "configHint": "Nur dieser Proxy und jeder Proxy, über den er verbindet. UnsungHero importiert ihn wie jede andere Konfiguration.",
         "editTitle": "Als neues Profil bearbeiten",
         "editMsg": "„${name}“ wird in ein neues Profil kopiert, das Sie bearbeiten können. Das Original bleibt unverändert, da ein Abo seine Proxys bei jeder Aktualisierung ersetzt.",
         "editConfirm": "Kopieren und bearbeiten",
@@ -238,7 +238,7 @@
         "received": "Vom Smartphone empfangen",
         "from": "Von $address",
         "page": {
-          "title": "An Hiddify auf Ihrem Fernseher senden",
+          "title": "An UnsungHero auf Ihrem Fernseher senden",
           "intro": "Fügen Sie Ihrem Fernseher in vier kurzen Schritten ein Abo hinzu, ohne es mit der Fernbedienung einzutippen.",
           "steps": {
             "network": {
@@ -277,7 +277,7 @@
       "updateSubscriptions": "Abos aktualisieren",
       "share": {
         "title": "Profil teilen",
-        "scanHint": "Scannen Sie den Code mit Hiddify auf einem anderen Gerät, um dieses Profil hinzuzufügen",
+        "scanHint": "Scannen Sie den Code mit UnsungHero auf einem anderen Gerät, um dieses Profil hinzuzufügen",
         "link": "Abo-Link",
         "config": "Konfiguration",
         "configHint": "Das vollständige JSON, mit dem dieses Profil läuft, einschließlich Ihrer Einstellungen",
@@ -288,9 +288,9 @@
         "tooLargeToCopy": "Zu groß für die Zwischenablage: Teilen Sie es oder speichern Sie es als Datei",
         "toTv": {
           "button": "An Fernseher senden",
-          "scanHint": "Öffnen Sie am Fernseher Hiddify und tippen Sie auf +, um ein Profil hinzuzufügen. Scannen Sie dann den angezeigten Code. Beide Geräte müssen im selben WLAN sein.",
+          "scanHint": "Öffnen Sie am Fernseher UnsungHero und tippen Sie auf +, um ein Profil hinzuzufügen. Scannen Sie dann den angezeigten Code. Beide Geräte müssen im selben WLAN sein.",
           "sent": "Gesendet. Drücken Sie am Fernseher auf „Importieren“, um es hinzuzufügen.",
-          "notTvCode": "Das ist kein Hiddify-Fernsehcode. Tippen Sie am Fernseher auf +, um ein Profil hinzuzufügen und den Code anzuzeigen.",
+          "notTvCode": "Das ist kein UnsungHero-Fernsehcode. Tippen Sie am Fernseher auf +, um ein Profil hinzuzufügen und den Code anzuzeigen.",
           "expired": "Der Fernseher nimmt mit diesem Code keine Links mehr an. Öffnen Sie den Bildschirm „Profil hinzufügen“ am Fernseher erneut und scannen Sie den neuen Code.",
           "busy": "Auf dem Fernseher warten zu viele Links. Importieren oder verwerfen Sie sie am Fernseher und versuchen Sie es dann erneut.",
           "unreachable": "Der Fernseher ist nicht erreichbar. Stellen Sie sicher, dass Smartphone und Fernseher im selben WLAN sind."
@@ -955,7 +955,7 @@
       "updateNow": "Jetzt aktualisieren",
       "downloading": "Wird heruntergeladen …",
       "installing": "Installationsprogramm wird gestartet …",
-      "allowInstall": "Erlauben Sie Hiddify in den geöffneten Einstellungen, Apps zu installieren, und versuchen Sie es dann erneut.",
+      "allowInstall": "Erlauben Sie UnsungHero in den geöffneten Einstellungen, Apps zu installieren, und versuchen Sie es dann erneut.",
       "failed": "Das Update konnte nicht installiert werden.",
       "openPage": "Seite der Version öffnen",
       "tryAgain": "Erneut versuchen"
@@ -1002,7 +1002,7 @@
         "someApps": "Browser und die meisten Apps",
         "switched": "Zum System-Proxy-Modus gewechselt. Sie können das in den Einstellungen ändern.",
         "waitingTitle": "Warten auf Administratorberechtigung",
-        "waitingMsg": "Hiddify wartet darauf, dass Sie den VPN-Modus erlauben.",
+        "waitingMsg": "UnsungHero wartet darauf, dass Sie den VPN-Modus erlauben.",
         "waitingWhere": "Im geöffneten Fenster:",
         "waitingWindows": "Klicken Sie auf „Ja“.",
         "waitingMac": "Geben Sie Ihr Mac-Passwort ein und bestätigen Sie.",
@@ -1019,22 +1019,22 @@
         "helpProsTitle": "Vorteile",
         "helpConsTitle": "Zu beachten",
         "helpVpn": {
-          "what": "Hiddify richtet auf Ihrem Computer ein virtuelles Netzwerk ein, und der Internetverkehr jeder App läuft von selbst darüber: Browser, Telegram, Spiele, Updates und alles andere. In den einzelnen Apps muss nichts eingerichtet werden.",
+          "what": "UnsungHero richtet auf Ihrem Computer ein virtuelles Netzwerk ein, und der Internetverkehr jeder App läuft von selbst darüber: Browser, Telegram, Spiele, Updates und alles andere. In den einzelnen Apps muss nichts eingerichtet werden.",
           "pros": [
-            "Jede App läuft über Hiddify, ohne Einstellungen in den einzelnen Apps.",
+            "Jede App läuft über UnsungHero, ohne Einstellungen in den einzelnen Apps.",
             "Auch Apps, die Proxy-Einstellungen ignorieren, wie Telegram und Spiele, funktionieren.",
-            "Auch Namensabfragen (DNS) laufen über Hiddify, sodass auch auf diese Weise gesperrte Websites sich öffnen."
+            "Auch Namensabfragen (DNS) laufen über UnsungHero, sodass auch auf diese Weise gesperrte Websites sich öffnen."
           ],
           "cons": [
-            "Beim ersten Mal fragt Ihr Computer nach der Administratorberechtigung, um den Hintergrunddienst von Hiddify zu installieren. Danach verbindet er sich ohne Nachfrage.",
+            "Beim ersten Mal fragt Ihr Computer nach der Administratorberechtigung, um den Hintergrunddienst von UnsungHero zu installieren. Danach verbindet er sich ohne Nachfrage.",
             "Schalten Sie andere VPN-Apps aus, solange Sie es nutzen: Zwei gleichzeitig stören sich gegenseitig."
           ]
         },
         "helpSystemProxy": {
-          "what": "Hiddify ändert die Proxy-Einstellung Ihres Computers. Apps, die dieser Einstellung folgen, etwa Webbrowser, senden ihren Datenverkehr über Hiddify. Alle anderen verbinden sich direkt, als wäre Hiddify aus.",
+          "what": "UnsungHero ändert die Proxy-Einstellung Ihres Computers. Apps, die dieser Einstellung folgen, etwa Webbrowser, senden ihren Datenverkehr über UnsungHero. Alle anderen verbinden sich direkt, als wäre UnsungHero aus.",
           "pros": [
             "Keine Administratorberechtigung nötig.",
-            "Schnell ein- und auszuschalten, und Hiddify setzt die Einstellung beim Trennen zurück.",
+            "Schnell ein- und auszuschalten, und UnsungHero setzt die Einstellung beim Trennen zurück.",
             "Funktioniert neben anderen Netzwerkwerkzeugen auf Ihrem Computer."
           ],
           "cons": [
@@ -1066,7 +1066,7 @@
       "msg": "Legen wir los. Fügen Sie ein Verbindungsprofil mit den Daten Ihres VPN-Servers hinzu.\n\nNoch keinen Server? Kein Problem. Die Anleitung unten zeigt, wie Sie kostenlos einen einrichten.",
       "helpBtn": {
         "label": "Anleitung anzeigen",
-        "url": "https://hiddify.com/manager/"
+        "url": "https://t.me/UnsungHeroBot"
       }
     },
     "unknownDomainsWarning": {
@@ -1135,18 +1135,18 @@
       "scrubSecrets": "IPs, Domains und Schlüssel werden entfernt",
       "encryptingLogs": "Logs werden verschlüsselt",
       "notEncrypted": "Logs sind nicht verschlüsselt",
-      "title": "Hiddify ist beim letzten Mal abgestürzt",
+      "title": "UnsungHero ist beim letzten Mal abgestürzt",
       "msg": "Sende einen Bericht, damit wir es beheben. Die Logs kommen mit.",
-      "sendHiddify": "An Hiddify senden",
+      "sendHiddify": "An UnsungHero senden",
       "sendHiddifyMsg": "Die App lädt den Bericht selbst hoch",
       "sent": "Bericht gesendet. Danke!",
       "sendFailed": "Der Bericht konnte nicht gesendet werden. Versuchen Sie es stattdessen per E-Mail oder Telegram.",
-      "subject": "Hiddify-Absturzbericht",
+      "subject": "UnsungHero-Absturzbericht",
       "problemTitle": "Problem melden",
       "problemMsg": "Sag uns, was schiefging. Die Logs kommen mit.",
       "description": "Was ist passiert? (optional)",
       "descriptionHint": "Was Sie getan haben, was Sie erwartet haben, was Sie stattdessen gesehen haben",
-      "problemSubject": "Hiddify-Problembericht",
+      "problemSubject": "UnsungHero-Problembericht",
       "back": "Zurück",
       "chooseHow": "Wie möchten Sie ihn senden?",
       "steps": {
@@ -1166,8 +1166,8 @@
         "openGithubMsg": "Melden Sie sich bei GitHub an. Ihre Beschreibung, Plattform, Version und Ihr System sind bereits ausgefüllt.",
         "openGithubButton": "GitHub öffnen",
         "dropInIssue": "Hängen Sie den Bericht an und drücken Sie Create",
-        "telegramPrivate": "Privat: Nur das Hiddify-Support-Team sieht den Bericht.",
-        "emailPrivate": "Privat: Nur das Hiddify-Team liest den Bericht.",
+        "telegramPrivate": "Privat: Nur das UnsungHero-Support-Team sieht den Bericht.",
+        "emailPrivate": "Privat: Nur das UnsungHero-Team liest den Bericht.",
         "attachInChat": "Hängen Sie den Bericht im Bot-Chat an und senden Sie ihn ab",
         "attachHow": "Ziehen Sie die Datei hinein oder nutzen Sie die Büroklammer",
         "dropInIssueHow": "Ziehen Sie die Datei in Additional Context oder tippen Sie auf die Leiste unter diesem Feld",
@@ -1181,7 +1181,7 @@
         "step1Msg": "Danach schalten sie sich selbst ab",
         "step2": "Verbinde dich erneut und lass das Problem auftreten",
         "step2Msg": "Mach genau das, was du gemacht hast, als es schiefging",
-        "step2Connected": "Hiddify verbindet sich selbst neu, um mitzuloggen. Mach jetzt, was vorher schiefging.",
+        "step2Connected": "UnsungHero verbindet sich selbst neu, um mitzuloggen. Mach jetzt, was vorher schiefging.",
         "step3": "Komm hierher zurück und sende deinen Bericht",
         "step3Msg": "Öffne erneut „Problem melden“ und beschreibe, was du gesehen hast",
         "privacy": "IPs, Domains und Schlüssel werden entfernt, bevor etwas dein Gerät verlässt. Nach $minutes Minuten wird wieder normal geloggt.",
@@ -1257,7 +1257,7 @@
         "Öffnen Sie die Proxy-Einstellungen der App",
         "Wählen Sie SOCKS5 oder HTTP",
         "Geben Sie die Werte unten ein · zum Kopieren tippen",
-        "Lassen Sie Hiddify verbunden"
+        "Lassen Sie UnsungHero verbunden"
       ],
       "hint": "Proxy-Modus · so geht's",
       "setPassword": "Passwort festlegen",
@@ -1278,21 +1278,21 @@
     },
     "dbNewerThanApp": {
       "title": "Gespeicherte Daten stammen aus einer neueren Version",
-      "msg": "Ihre Profile und Einstellungen wurden von einer neueren Version von Hiddify gespeichert, und diese ältere Version kann sie nicht lesen. Installieren Sie die neueste Version, um sie zu behalten, oder löschen Sie sie, um diese Version zu verwenden.",
+      "msg": "Ihre Profile und Einstellungen wurden von einer neueren Version von UnsungHero gespeichert, und diese ältere Version kann sie nicht lesen. Installieren Sie die neueste Version, um sie zu behalten, oder löschen Sie sie, um diese Version zu verwenden.",
       "deleteData": "Daten löschen",
       "deleteConfirm": "Die gespeicherten Daten werden gelöscht. Ihre Abos und lokalen Profile werden, soweit möglich, wieder hinzugefügt. Alles andere, was die neuere Version gespeichert hat, geht verloren.",
       "downloadLatest": "Neueste Version herunterladen"
     },
     "dbBroken": {
       "title": "Gespeicherte Daten können nicht geöffnet werden",
-      "msg": "Hiddify konnte seine gespeicherten Profile nicht öffnen. Löschen Sie die gespeicherten Daten, um neu zu beginnen: Ihre Abos und lokalen Profile werden, soweit möglich, wieder hinzugefügt, und Ihre Einstellungen bleiben erhalten.",
+      "msg": "UnsungHero konnte seine gespeicherten Profile nicht öffnen. Löschen Sie die gespeicherten Daten, um neu zu beginnen: Ihre Abos und lokalen Profile werden, soweit möglich, wieder hinzugefügt, und Ihre Einstellungen bleiben erhalten.",
       "wipeData": "Daten löschen",
-      "wipeConfirm": "Die gespeicherten Daten werden gelöscht und Hiddify startet neu. Profile, die sich noch lesen lassen, werden wieder hinzugefügt. Der Rest kann nicht wiederhergestellt werden.",
+      "wipeConfirm": "Die gespeicherten Daten werden gelöscht und UnsungHero startet neu. Profile, die sich noch lesen lassen, werden wieder hinzugefügt. Der Rest kann nicht wiederhergestellt werden.",
       "copyError": "Fehler kopieren"
     },
     "telegramChannel": {
-      "title": "Hiddify auf Telegram beitreten",
-      "msg": "Folgen Sie dem offiziellen Hiddify-Kanal für Neuigkeiten, neue Versionen und Tipps, um verbunden zu bleiben.",
+      "title": "UnsungHero auf Telegram beitreten",
+      "msg": "Folgen Sie dem offiziellen UnsungHero-Kanal für Neuigkeiten, neue Versionen und Tipps, um verbunden zu bleiben.",
       "join": "Kanal beitreten"
     }
   },
