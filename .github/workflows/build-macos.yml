@@ -24,6 +24,14 @@ on:
         description: The store build number (build.yml's codegen). Empty - the next one, found here.
         type: string
         default: ''
+      signed:
+        description: Import the Apple certificates and build the App Store target. Off, the direct download is built ad hoc signed only (no certificates needed).
+        type: boolean
+        default: true
+      generated-code:
+        description: Take the generated code from this run's `generated-code` artifact (build.yml's codegen). Off, it is generated here.
+        type: boolean
+        default: true
 
 env:
   CHANNEL: ${{ inputs.channel }}
@@ -43,12 +51,12 @@ jobs:
       matrix:
         # `platform` is the Makefile prefix and the artifact name. The App Store build needs the
         # signing certificates, so it is built for a release only.
-        platform: ${{ fromJSON(inputs.release && '["macos", "macos-appstore"]' || '["macos"]') }}
+        platform: ${{ fromJSON((inputs.release && inputs.signed) && '["macos", "macos-appstore"]' || '["macos"]') }}
     steps:
       - uses: actions/checkout@v6
 
       - uses: ./.github/actions/apple-signing
-        if: inputs.release
+        if: inputs.release && inputs.signed
         with:
           p12-base64: ${{ secrets.APPLE_CERTIFICATE_P12 }}
           p12-password: ${{ secrets.APPLE_CERTIFICATE_P12_PASSWORD }}
@@ -60,7 +68,7 @@ jobs:
         if: matrix.platform == 'macos'
         env:
           MACOS_SIGNING_XCCONFIG: ${{ secrets.APPLE_MACOS_SIGNING_XCCONFIG }}
-          SIGN_RELEASE: ${{ inputs.release }}
+          SIGN_RELEASE: ${{ inputs.release && inputs.signed }}
         run: |
           set -euo pipefail
           signing_config="$RUNNER_TEMP/hiddify-macos-signing.xcconfig"
@@ -79,7 +87,7 @@ jobs:
       - uses: ./.github/actions/setup-flutter
         with:
           platform: ${{ matrix.platform }}
-          generated-code: true
+          generated-code: ${{ inputs.generated-code }}
 
       # App Store Connect takes each build number once, like for iOS: the Mac App Store build gets
       # the run's store build number (next-build-number), the one the IPA and the Play bundle carry
@@ -108,7 +116,7 @@ jobs:
       - name: Check the app icon
         if: inputs.release
         run: |
-          app=build/macos/Build/Products/Release/Hiddify.app
+          app=build/macos/Build/Products/Release/UnsungHero.app
           xcodebuild -version
           for f in Assets.car AppIcon.icns; do
             [[ -s "$app/Contents/Resources/$f" ]] || { echo "::error::$app has no Contents/Resources/$f (app icon)"; exit 1; }
@@ -121,8 +129,8 @@ jobs:
         run: |
           ls -R dist
           mkdir out
-          mv dist/*/*.dmg out/Hiddify-MacOS.dmg
-          mv dist/*/*.pkg out/Hiddify-MacOS-Installer.pkg
+          mv dist/*/*.dmg out/UnsungHero-MacOS.dmg
+          mv dist/*/*.pkg out/UnsungHero-MacOS-Installer.pkg
 
       # The names must match testflight.yml.
       - name: Collect the App Store packages
@@ -136,7 +144,7 @@ jobs:
               echo "::error::macos-appstore $ext not found under dist/"
               exit 1
             fi
-            cp "$file" "out/Hiddify-MacOS-AppStore.$ext"
+            cp "$file" "out/UnsungHero-MacOS-AppStore.$ext"
           done
           ls -la out
 
@@ -147,7 +155,7 @@ jobs:
           APPLE_NOTARIZATION_APPLE_ID: ${{ secrets.APPLE_NOTARIZATION_APPLE_ID }}
           APPLE_NOTARIZATION_TEAM_ID: ${{ secrets.APPLE_NOTARIZATION_TEAM_ID }}
           APPLE_NOTARIZATION_PASSWORD: ${{ secrets.APPLE_NOTARIZATION_PASSWORD }}
-        run: bash macos/scripts/notarize-release.sh out/Hiddify-MacOS.dmg out/Hiddify-MacOS-Installer.pkg
+        run: bash macos/scripts/notarize-release.sh out/UnsungHero-MacOS.dmg out/UnsungHero-MacOS-Installer.pkg
 
       - name: Upload the artifact
         if: inputs.release

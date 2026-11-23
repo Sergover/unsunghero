@@ -58,16 +58,16 @@ enum InstallKind {
       switch (this) {
         androidApk =>
           release.asset(switch (abis.firstOrNull) {
-                'arm64-v8a' => 'Hiddify-Android-arm64.apk',
-                'armeabi-v7a' => 'Hiddify-Android-arm7.apk',
-                'x86_64' => 'Hiddify-Android-x86_64.apk',
-                _ => 'Hiddify-Android-universal.apk',
+                'arm64-v8a' => 'UnsungHero-Android-arm64.apk',
+                'armeabi-v7a' => 'UnsungHero-Android-arm7.apk',
+                'x86_64' => 'UnsungHero-Android-x86_64.apk',
+                _ => 'UnsungHero-Android-universal.apk',
               }) ??
-              release.asset('Hiddify-Android-universal.apk'),
-        windowsSetup => release.asset('Hiddify-Windows-Setup-x64.exe'),
-        linuxAppImage => release.asset('Hiddify-Linux-${arm64 ? 'arm64' : 'x64'}.AppImage'),
-        linuxDeb => release.asset('Hiddify-Debian-${arm64 ? 'arm64' : 'x64'}.deb'),
-        macOS => release.asset('Hiddify-MacOS.dmg'),
+              release.asset('UnsungHero-Android-universal.apk'),
+        windowsSetup => release.asset('UnsungHero-Windows-Setup-x64.exe'),
+        linuxAppImage => release.asset('UnsungHero-Linux-${arm64 ? 'arm64' : 'x64'}.AppImage'),
+        linuxDeb => release.asset('UnsungHero-Debian-${arm64 ? 'arm64' : 'x64'}.deb'),
+        macOS => release.asset('UnsungHero-MacOS.dmg'),
         store || windowsPortable || linuxOther => null,
       };
 }

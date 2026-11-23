@@ -1,9 +1,9 @@
-app_id: 6L903538-42B1-4596-G479-BJ779F21A65D
-publisher_name: Hiddify
-publisher_url: https://github.com/hiddify/hiddify-app
-display_name: Hiddify
+app_id: 7B2E1C4A-5D63-4F8E-9A17-UNSUNGHERO01
+publisher_name: UnsungHero
+publisher_url: https://github.com/Sergover/unsunghero
+display_name: UnsungHero
 create_desktop_icon: true
-install_dir_name: "{autopf64}\\Hiddify"
+install_dir_name: "{autopf64}\\UnsungHero"
 setup_icon_file: windows\runner\resources\app_icon.ico
 # The first locale is the setup's language when Windows' UI language matches none.
 locales:

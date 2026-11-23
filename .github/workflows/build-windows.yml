@@ -24,6 +24,14 @@ on:
         description: Unused here (the store builds take it); build.yml passes the same inputs to every platform.
         type: string
         default: ''
+      signed:
+        description: Authenticode-sign the build and package the MSIX. Off, Setup.exe and the portable zip are built unsigned (no certificate needed).
+        type: boolean
+        default: true
+      generated-code:
+        description: Take the generated code from this run's `generated-code` artifact (build.yml's codegen). Off, it is generated here.
+        type: boolean
+        default: true
 
 env:
   CHANNEL: ${{ inputs.channel }}
@@ -49,10 +57,10 @@ jobs:
       - uses: ./.github/actions/setup-flutter
         with:
           platform: windows
-          generated-code: true
+          generated-code: ${{ inputs.generated-code }}
 
       - name: Configure code signing
-        if: inputs.release
+        if: inputs.release && inputs.signed
         env:
           AZURE_SIGNING_ENDPOINT: ${{ secrets.AZURE_SIGNING_ENDPOINT }}
           AZURE_SIGNING_ACCOUNT: ${{ secrets.AZURE_SIGNING_ACCOUNT }}
@@ -68,7 +76,7 @@ jobs:
 
       # WINDOWS_SIGN_BACKEND and AZURE_OIDC come from configure_windows_signing.ps1.
       - name: Azure login (OIDC) for Artifact Signing
-        if: inputs.release && env.WINDOWS_SIGN_BACKEND == 'ArtifactSigning' && env.AZURE_OIDC == 'true'
+        if: inputs.release && inputs.signed && env.WINDOWS_SIGN_BACKEND == 'ArtifactSigning' && env.AZURE_OIDC == 'true'
         uses: azure/login@v3
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
@@ -94,7 +102,7 @@ jobs:
         run: make windows-validate
 
       - name: Sign the Release tree
-        if: inputs.release
+        if: inputs.release && inputs.signed
         env: *signing-env
         run: |
           & .\windows\scripts\sign_windows_artifacts.ps1 -Path build\windows\x64\runner\Release
@@ -109,14 +117,14 @@ jobs:
         run: make windows-exe-release
 
       - name: Package the MSIX
-        if: inputs.release
+        if: inputs.release && inputs.signed
         env: *signing-env
         run: make windows-msix-release
 
       # Signs Setup.exe / MSIX and the PE files inside the portable zip. Skips files that already
       # verify as signed (MSVC runtimes; pre-signed Release PE).
       - name: Sign the packages
-        if: inputs.release
+        if: inputs.release && inputs.signed
         env: *signing-env
         run: |
           & .\windows\scripts\sign_windows_artifacts.ps1 -Path dist
@@ -128,9 +136,9 @@ jobs:
           Get-ChildItem -Path dist -Recurse | Select-Object FullName
           New-Item -ItemType Directory -Path out -Force | Out-Null
           $names = [ordered]@{
-            exe  = 'Hiddify-Windows-Setup-x64.exe'
-            msix = 'Hiddify-Windows-Setup-x64.Msix'
-            zip  = 'Hiddify-Windows-Portable-x64.zip'
+            exe  = 'UnsungHero-Windows-Setup-x64.exe'
+            msix = 'UnsungHero-Windows-Setup-x64.Msix'
+            zip  = 'UnsungHero-Windows-Portable-x64.zip'
           }
           foreach ($ext in $names.Keys) {
             $name = $names[$ext]

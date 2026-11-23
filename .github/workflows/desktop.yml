@@ -1,0 +1,36 @@
+# macOS (dmg + pkg, ad hoc signed) and Windows (Setup.exe + portable zip, unsigned), on demand
+# (UnsungHero). Run it from the Actions tab on the branch to build. No signing certificates needed.
+name: Desktop
+
+on:
+  workflow_dispatch:
+    inputs:
+      channel:
+        description: dev or prod (which hiddify-core release the Makefile downloads).
+        type: string
+        default: prod
+
+jobs:
+  macos:
+    uses: ./.github/workflows/build-macos.yml
+    secrets: inherit
+    permissions:
+      contents: read
+    with:
+      release: true
+      channel: ${{ inputs.channel }}
+      signed: false
+      generated-code: false
+
+  windows:
+    uses: ./.github/workflows/build-windows.yml
+    secrets: inherit
+    permissions:
+      contents: read
+      id-token: write
+      attestations: write
+    with:
+      release: true
+      channel: ${{ inputs.channel }}
+      signed: false
+      generated-code: false
