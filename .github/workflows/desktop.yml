@@ -9,6 +9,14 @@ on:
         description: dev or prod (which hiddify-core release the Makefile downloads).
         type: string
         default: prod
+      macos-runner:
+        description: Runner for the macOS build (macos-26, or macos-15 when macos-26 has no capacity).
+        type: string
+        default: macos-15
+      windows:
+        description: Build Windows too.
+        type: boolean
+        default: true
 
 jobs:
   macos:
@@ -21,8 +29,10 @@ jobs:
       channel: ${{ inputs.channel }}
       signed: false
       generated-code: false
+      runner: ${{ inputs.macos-runner }}
 
   windows:
+    if: inputs.windows
     uses: ./.github/workflows/build-windows.yml
     secrets: inherit
     permissions:
