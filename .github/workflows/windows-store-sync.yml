@@ -5,8 +5,6 @@
 name: Windows Store Sync
 
 on:
-  schedule:
-    - cron: '23 */4 * * *'
   workflow_dispatch:
     inputs:
       tag:
