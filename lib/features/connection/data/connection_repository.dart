@@ -246,20 +246,16 @@ class ConnectionRepositoryImpl with ExceptionHandler, InfraLogger implements Con
 
     if (core.tunnelServiceReady) return;
 
-    // Refusing the password prompt, or stopping the wait for it, goes back to the choice.
-    while (true) {
-      if (pref == UserAdminPreference.unset) {
-        final choice = await dialogs.showVpnAdminBgService();
-        if (choice == VpnAdminBgDialogResult.switchToSystemProxy) return _switchToSystemProxy(profile);
-        if (choice != VpnAdminBgDialogResult.connectWithAdmin) {
-          throw const ConnectionFailure.missingPrivilege();
-        }
+    // VPN mode only: no mode choice; refusing the password prompt ends the attempt.
+    if (pref == UserAdminPreference.unset) {
+      final choice = await dialogs.showVpnAdminBgService();
+      if (choice == VpnAdminBgDialogResult.switchToSystemProxy) return _switchToSystemProxy(profile);
+      if (choice != VpnAdminBgDialogResult.connectWithAdmin) {
+        throw const ConnectionFailure.missingPrivilege();
       }
-      if (await _installMacosAdminBgService(core, dialogs)) return;
-      // no choice to go back to: the profile always asks for administrator permission
-      if (pref != UserAdminPreference.unset) throw const ConnectionFailure.missingPrivilege();
-      loggy.info("administrator permission was not given, offering the choice again");
     }
+    if (await _installMacosAdminBgService(core, dialogs)) return;
+    throw const ConnectionFailure.missingPrivilege();
   }
 
   /// Installs the macOS tunnel service behind the password prompt: true once installed, false when

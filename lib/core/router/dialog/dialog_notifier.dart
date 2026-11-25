@@ -354,10 +354,10 @@ class DialogNotifier extends _$DialogNotifier {
     return await _show<void>(DownloadFailureDialog(failure: failure, action: action));
   }
 
-  /// Mode B: VPN needs elevated admin_bgservice.
+  /// Mode B: VPN needs elevated admin_bgservice. UnsungHero is VPN mode only: the choice between
+  /// VPN mode and system proxy is not offered, the administrator prompt follows at once.
   Future<VpnAdminBgDialogResult> showVpnAdminBgService({bool waiting = false}) async {
-    return await _show<VpnAdminBgDialogResult?>(VpnAdminBgServiceDialog(waiting: waiting)) ??
-        VpnAdminBgDialogResult.cancel;
+    return VpnAdminBgDialogResult.connectWithAdmin;
   }
 
   /// Shows the Mode B waiting dialog while [work] runs.
