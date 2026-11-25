@@ -11,13 +11,15 @@ if [[ "$(id -u)" != 0 ]]; then
   echo 'error: run this script with sudo.' >&2
   exit 1
 fi
-if [[ -x "$task_destination/Contents/MacOS/Hiddify" ]]; then
-  "$task_destination/Contents/MacOS/Hiddify" --tunnel uninstall || true
-elif [[ -x "$task_legacy/Contents/MacOS/Hiddify" ]]; then
-  "$task_legacy/Contents/MacOS/Hiddify" --tunnel uninstall || true
-fi
+for task_old in "$task_destination/Contents/MacOS/UnsungHero" "$task_destination/Contents/MacOS/Hiddify" \
+  "$task_legacy/Contents/MacOS/Hiddify"; do
+  if [[ -x "$task_old" ]]; then
+    "$task_old" --tunnel uninstall || true
+    break
+  fi
+done
 # Drop both the current and pre-rename install trees.
 rm -rf "/Library/Application Support/Hiddify/AdminBgService" \
   "/Library/Application Support/Hiddify/TunnelService"
 rmdir "/Library/Application Support/Hiddify" 2>/dev/null || true
-echo 'Hiddify VPN service removed.'
+echo 'UnsungHero VPN service removed.'

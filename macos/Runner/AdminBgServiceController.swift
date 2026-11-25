@@ -253,7 +253,7 @@ final class TunnelServiceController {
             if !Self.serviceListening() {
                 return "The VPN service was installed but did not start."
             }
-            return "The VPN service is still running a different Hiddify core. Try connecting again."
+            return "The VPN service is still running a different UnsungHero core. Try connecting again."
         }
         return nil
     }
@@ -323,7 +323,7 @@ final class TunnelServiceController {
         let owner = NSUserName()
         let source = "do shell script \"/bin/bash \" & quoted form of \(quote(script)) & \" \" & quoted form of "
             + "\(quote(Bundle.main.bundlePath)) & \" \" & quoted form of \(quote(owner)) with prompt "
-            + "\"VPN mode sends all of this Mac's traffic through Hiddify, "
+            + "\"VPN mode sends all of this Mac's traffic through UnsungHero, "
             + "which needs administrator permission. Hiddify asks for it once.\" "
             + "with administrator privileges"
         var error: NSDictionary?

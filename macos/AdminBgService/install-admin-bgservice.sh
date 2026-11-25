@@ -16,8 +16,10 @@ if [[ "$(id -u)" != 0 ]]; then
   echo 'error: run this script with sudo.' >&2
   exit 1
 fi
-if [[ ! -x "$task_source/Contents/MacOS/Hiddify" ]]; then
-  echo 'error: pass the path of Hiddify.app.' >&2
+# The app's executable is named after the product (UnsungHero); the copy keeps that name.
+task_executable="$(/usr/libexec/PlistBuddy -c 'Print :CFBundleExecutable' "$task_source/Contents/Info.plist" 2>/dev/null || true)"
+if [[ -z "$task_executable" || ! -x "$task_source/Contents/MacOS/$task_executable" ]]; then
+  echo 'error: pass the path of UnsungHero.app.' >&2
   exit 1
 fi
 
@@ -29,9 +31,12 @@ rm -rf "/Library/Application Support/Hiddify/TunnelHelper"
 
 task_legacy="/Library/Application Support/Hiddify/TunnelService/Hiddify.app"
 for task_existing in "$task_destination" "$task_legacy"; do
-  if [[ -x "$task_existing/Contents/MacOS/Hiddify" ]]; then
-    "$task_existing/Contents/MacOS/Hiddify" --tunnel uninstall || true
-  fi
+  for task_old in "$task_existing/Contents/MacOS/$task_executable" "$task_existing/Contents/MacOS/Hiddify"; do
+    if [[ -x "$task_old" ]]; then
+      "$task_old" --tunnel uninstall || true
+      break
+    fi
+  done
 done
 # A root daemon must not run files its user can change, so it runs a root-owned copy of the app.
 rm -rf "$task_destination" "/Library/Application Support/Hiddify/TunnelService"
@@ -43,5 +48,5 @@ chmod -R go-w "$task_destination"
 # Create the control secret for the installing user before the daemon starts listening.
 export HIDDIFY_TUNNEL_OWNER="$task_owner"
 export HIDDIFY_ADMIN_BG_OWNER="$task_owner"
-"$task_destination/Contents/MacOS/Hiddify" --tunnel install
-echo 'Hiddify VPN service installed.'
+"$task_destination/Contents/MacOS/$task_executable" --tunnel install
+echo 'UnsungHero VPN service installed.'
